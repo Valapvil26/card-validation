@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0"
+    />
+    <title>Tarjeta de crédito válida</title>
+    <link rel="stylesheet" href="/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--CONTENEDOR-->
+    <div class="contenedor">
+      <div class="detalles" id="detallePago"> ← INGRESA NUEVO MÉTODO DE PAGO </div>
+
+      <!--TARJETA-->
+      <section class="tarjeta" id="tarjeta">
+        <!--PARTE FRONTAL DE LA TARJETA-->
+        <div class="frontal">
+          <div class="logoBanco">
+            <img src="/logo-visa.png" width="100px" alt="" />
+            <!-- LOGO DE VISA-->
+          </div>
+          <div class="chip">
+            <img src="/chip.png" width="50px" alt="" />
+            <!-- IMAGEN DEL CHIP-->
+          </div>
+
+          <div class="informacion">
+            <div class="grupo" id="numero">
+              <p class="label">Número Tarjeta</p>
+              <p class="numero">0000 0000 0000 0000</p>
+            </div>
+            <div class="flexbox">
+              <div class="grupo" id="nombre">
+                <p class="label">Nombre tarjeta</p>
+                <p class="nombre">VALENTINA APONTE VILLAMIL</p>
+              </div>
+              <div class="grupo" id="expiracion">
+                <p class="label">Exp. Date</p>
+                <p class="expiracion">
+                  <span class="mes">05</span> / <span class="year">26</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        -
+
+        <!-- PARTE TRASERA DE LA TARJETA-->
+        <div class="trasera" id="trasera">
+          <div class="barra-magnetica"></div>
+          <div class="informacion">
+            <div class="grupo" id="firma">
+              <p class="label">Firma</p>
+              <div class="firma"><p>Valentina Aponte Villamil</p></div>
+            </div>
+            <div class="grupo" id="cvv">
+              <p class="label">CVV</p>
+              <p class="cvv">345</p>
+            </div>
+          </div>
+          <p class="texto">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+            mollitia esse tempore eaque, illum deleniti voluptatem ipsam
+            voluptate eos.
+          </p>
+        </div>
+      </section>
+
+      <!--<div class="button-select">
+      <div id="frontal"></div>
+      <div id="trasera"></div>
+    </div>-->
+
+      <!-- FORMULARIO-->
+      <form action="" class="formulario" id="formulario">
+        <div class="grupo">
+          <label for="contNumero">Número Tarjeta</label>
+          <input
+            type="text"
+            placeholder="0000 0000 0000 0000"
+            id="contNumero"
+            maxlength="19"
+            autocomplete="off"
+            required
+          />
+        </div>
+
+        <!-- <div class="flexbox">
+          <div class="grupo-expira">
+            <label for="selectMes">Exp. Date</label>
+            <div class="flexbox">
+              <div class="grupo-select">
+                <select name="mes" id="selectMes">
+                  <option disabled selected>Mes</option>
+                </select>
+              </div>
+              <div class="grupo-select">
+                <select name="year" id="selectYear">
+                  <option disabled selected>Año</option>
+                </select>
+                </div>
+              </div>
+            </div>
+          </div> -->
+
+        <!--BOTÓN VALIDAR-->
+        <button type="submit" class="btn-validar" id="validar">Validar</button>
+      </form>
+      <br /><br />
+      <div id="verificarResultado" class="verificarResultado"></div>
+    </div>
+
+    <header></header>
+    <main></main>
+    <footer></footer>
+    <script src="/index.js" type="module"></script>
+    <!--<script src="js/main.js"></script>-->
+  </body>
+</html>
