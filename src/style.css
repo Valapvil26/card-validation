@@ -1,0 +1,237 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: #ddeefc;
+    font-family: "Gemunu Libre", sans-serif;
+  }
+  
+  /*Estilo general del contenedor*/
+  .contenedor {
+    width: 90%;
+    max-width: 700px;
+    padding: 40px 20px 100px; /*Largo del contenedor*/
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+    margin-top: 50px;
+  }
+  
+  .detalles {
+    margin-bottom: 30px;
+    font-size: 25px;
+    color: rgb(122, 36, 94);
+    margin-left: -210px;
+    text-shadow: 1px 1px #000;
+    font-weight: 500px;
+  }
+  
+  /*Estilo general de la tarjeta*/
+  .tarjeta {
+    width: 100%;
+    max-width: 550px; /*Ancho Máximo*/
+    position: relative;
+    color: #fff;
+    transition: 0.3s ease all; /*Transición de las caras de la tarjeta*/
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+  .tarjeta.active {
+    transform: rotateY(180deg);
+  }
+  
+  /*Estos son los estilos generales de las dos tarjetas (Frontal/trasera*/
+  .tarjeta > div {
+    padding: 30px;
+    border-radius: 15px;
+    min-height: 315px; /*Altura mínima*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 10px 10px 0 rgba(90, 116, 146, 0.3);
+  }
+  
+  /*FRONTAL*/
+  
+  .tarjeta .frontal {
+    width: 100%;
+    background: url(/fondo5.png);
+    background-size: cover;
+  }
+  
+  .tarjeta .logoBanco {
+    text-align: left;
+    min-height: 30px;
+  }
+  
+  .frontal .logoBanco img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-width: 80px;
+  }
+  
+  .frontal .chip img {
+    width: 100%;
+    max-width: 50px;
+    margin-bottom: 20px; /*Margen-inferior*/
+  }
+  
+  .tarjeta .chip {
+    text-align: right;
+    min-height: 50px;
+  }
+  
+  .frontal .grupo .label {
+    font-size: 22px;
+    color: #ffffff;
+    margin-bottom: 5px;
+    font-weight: 200;
+    text-shadow: 2px 2px #000;
+  }
+  
+  .frontal .grupo .numero,
+  .frontal .grupo .nombre,
+  .frontal .grupo .expiracion {
+    color: #fff; /*Color texto formulario */
+    font-size: 22px;
+    text-transform: uppercase;
+  }
+  
+  .frontal .flexbox {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  /*TRASERA*/
+  
+  .trasera {
+    background: url(/fondo7.png);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    transform: rotateY(
+      180deg
+    ); /*Se gira 180° para que se vea primero la frontal y se oculta con hidden*/
+    backface-visibility: hidden; /*Determina si la cara posterior de un elemento es visible de frente al usuario.*/
+  }
+  
+  .trasera .barra-magnetica {
+    height: 40px;
+    background: rgb(14, 0, 145);
+    width: 99%;
+    position: absolute; /*position absolute porque el padding no permite que llegue al fondo*/
+    top: 30px;
+    left: 0%;
+  }
+  
+  .trasera .informacion {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .trasera .informacion p {
+    margin-bottom: 5px;
+  }
+  
+  .trasera .informacion #firma {
+    width: 70%;
+    font-size: 22px;
+    color: #ffffff;
+    font-weight: 200;
+  }
+  
+  .trasera .label {
+    text-shadow: 2px 2px #000;
+  }
+  
+  .trasera .informacion #firma .firma {
+    height: 40px;
+    background: repeating-linear-gradient(
+      rgb(191, 184, 231) 0,
+      rgb(191, 184, 231) 5px,
+      #fff 5px,
+      #fff 10px
+    ); /*Repetición de lineas*/
+    border-radius: 5px;
+  }
+  
+  .trasera .informacion #firma .firma p {
+    line-height: 40px;
+    font-family: "Liu Jian Mao Cao", cursive;
+    color: #000;
+    font-size: 30px;
+    padding: 0 10px;
+    text-transform: capitalize; /*Especifica el cambio entre mayúsculas y minúsculas del texto de un elemento.*/
+  }
+  
+  .trasera .informacion #cvv {
+    width: 20%;
+    font-size: 22px;
+    color: #ffffff;
+    font-weight: 200;
+  }
+  
+  .trasera .informacion #cvv .cvv {
+    background: #fff; /*Color caja CVV*/
+    height: 40px;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+  }
+  
+  .trasera .texto {
+    line-height: 25px;
+    font-size: 15px;
+  }
+  
+  /*Formulario*/
+  
+  .formulario {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 18px;
+    border-radius: 4px;
+    font-family: "Gemunu Libre", sans-serif;
+    border: 1px;
+    padding-left: 10px;
+    font-size: 1em;
+    outline: none;
+    text-align: center;
+  }
+  
+  .formulario label {
+    display: block;
+    color: #7d8994;
+    margin-bottom: 5px;
+    font-size: 25px;
+  }
+  
+  .formulario input {  /*Tamaño del input del número de la tarjeta*/
+    padding: 10px;
+    font-size: 20px;
+  }
+  
+  .btn-validar {
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: "Gemunu Libre", sans-serif;
+    font-size: 20px;
+    padding: 5px 10px;
+    border-color: #6f00af;
+    cursor: pointer;
+  }
