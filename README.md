@@ -8,7 +8,16 @@
 ***
 
 ## 1. Imagen final del proyecto
-![gráfica de algoritmo de Luhn] <img src=/imagen1.png>
+<br>
+<img height="700" src="/imagen1.png" alt="Imagen final de proyecto">
+</br>
+<br>
+<img height="700" src="/imagen2.png" alt="Imagen tarjeta válida">
+</br>
+<br>
+<img height="700" src="/imagen3.png" alt="Imagen tarjeta inválida">
+</br>
+
 ## 2. Resumen
 
 El proyecto de Card Validation es aplicado a la función de verificación de tarjetas de crédito en aplicaciones de compra de productos en aplicaciones y páginas web, en la que es necesario agregar diferentes métodos de pago para poder realizar dicha compra. 
