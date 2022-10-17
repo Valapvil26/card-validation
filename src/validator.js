@@ -36,8 +36,8 @@ const validator = {
   maskify: function (creditCardNumber) {
     const tamaño = creditCardNumber.length;
     return (
-      ("" + creditCardNumber).slice(0, tamaño - 5).replace(/./g, "#") + /*5 porque me esta tomando los espacios como número*/
-      ("" + creditCardNumber).slice(tamaño - 5)
+      ("" + creditCardNumber).slice(0, tamaño - 4).replace(/./g, "#") + /*5 porque me esta tomando los espacios como número*/
+      ("" + creditCardNumber).slice(tamaño - 4)
     );
   },
 };
