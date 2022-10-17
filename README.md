@@ -9,20 +9,14 @@
 
 ## 1. Imagen final del proyecto
 <br>
-<img height="700" src="imagen1.PNG" alt="Imagen final de proyecto">
+<img height="700" src="/imagen1.PNG" alt="Imagen final de proyecto">
 </br>
 <br>
-<<<<<<< HEAD
 <img height="700" src="/imagen2.PNG" alt="Imagen tarjeta válida">
 </br>
 <br>
 <img height="700" src="/imagen3.PNG" alt="Imagen tarjeta inválida">
-=======
-<img height="700" src="imagen2.PNG" alt="Imagen tarjeta válida">
-</br>
-<br>
-<img height="700" src="imagen3.PNG" alt="Imagen tarjeta inválida">
->>>>>>> b5a867cde1258dfaa8edef6d3226f3d99617dc00
+
 </br>
 
 ## 2. Resumen
