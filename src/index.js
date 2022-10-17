@@ -4,6 +4,7 @@ import validator from "./validator.js";
 let tarjeta = document.querySelector("#tarjeta"),
 numeroTarjeta = document.querySelector("#tarjeta .numero"); /*crear la constante de numero de tarjeta para que al escribir se vaya mostrando en la tarjeta*/
 
+
 /*girar la tarjeta para ver los datos de atras*/
 let girarTarjeta = () => {
 if (tarjeta.classList.contains("active")) {
@@ -32,6 +33,13 @@ numeroTarjeta.textContent = valorInput;
 
 if (valorInput == "") {
   numeroTarjeta.textContent = "#### #### #### ####";
+}
+
+for(let i = 1; i <= 12; i++){
+	let opcion = document.createElement('option');
+	opcion.value = i;
+	opcion.innerText = i;
+	formulario.selectMes.appendChild(opcion);
 }
 
 girarTarjeta(); /* Voltea la cara de la tarjeta para que se vea el frente.*/
@@ -64,7 +72,7 @@ ingresarNumero.addEventListener("submit", (Event) => {
         "<h2> Tarjeta válida"; /*mensaje de pago exitoso*/
     } else {
       verificarResultado.innerHTML =
-        "<h2> Tarjeta no puede ser verificada"; /*mensaje de pago rechazado*/
+        "<h2> Tarjeta inválida"; /*mensaje de pago rechazado*/
     }
   }
 
